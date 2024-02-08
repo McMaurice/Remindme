@@ -13,9 +13,10 @@
 		EA32C19B2B67A817000EB176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA32C19A2B67A817000EB176 /* Assets.xcassets */; };
 		EA32C19E2B67A817000EB176 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA32C19D2B67A817000EB176 /* Preview Assets.xcassets */; };
 		EA32C1AB2B67D932000EB176 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32C1AA2B67D932000EB176 /* ContentView.swift */; };
-		EA32C1AD2B67DE4F000EB176 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32C1AC2B67DE4F000EB176 /* ViewModel.swift */; };
+		EA32C1AD2B67DE4F000EB176 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32C1AC2B67DE4F000EB176 /* UserModel.swift */; };
 		EA32C1B12B67FAA1000EB176 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32C1B02B67FAA1000EB176 /* HomeView.swift */; };
 		EA32C1B32B67FBA5000EB176 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32C1B22B67FBA5000EB176 /* AddView.swift */; };
+		EAA7C1902B75734A00F20F81 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7C18F2B75734A00F20F81 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,9 +27,10 @@
 		EA32C19A2B67A817000EB176 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA32C19D2B67A817000EB176 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA32C1AA2B67D932000EB176 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EA32C1AC2B67DE4F000EB176 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		EA32C1AC2B67DE4F000EB176 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		EA32C1B02B67FAA1000EB176 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EA32C1B22B67FBA5000EB176 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		EAA7C18F2B75734A00F20F81 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				EA32C1962B67A815000EB176 /* RemindmeApp.swift */,
 				EAB6E2AE2B691D1E001A3B0D /* Model */,
 				EAB6E2AF2B691D44001A3B0D /* Views */,
+				EAA7C18E2B7572AD00F20F81 /* ViewModel */,
 				EA32C19A2B67A817000EB176 /* Assets.xcassets */,
 				EA32C19C2B67A817000EB176 /* Preview Content */,
 			);
@@ -78,10 +81,18 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EAA7C18E2B7572AD00F20F81 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EAA7C18F2B75734A00F20F81 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		EAB6E2AE2B691D1E001A3B0D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EA32C1AC2B67DE4F000EB176 /* ViewModel.swift */,
+				EA32C1AC2B67DE4F000EB176 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,12 +179,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA32C1AD2B67DE4F000EB176 /* ViewModel.swift in Sources */,
+				EA32C1AD2B67DE4F000EB176 /* UserModel.swift in Sources */,
 				EA32C1B12B67FAA1000EB176 /* HomeView.swift in Sources */,
 				EA32C1992B67A816000EB176 /* LoadingView.swift in Sources */,
 				EA2B450E2B6AA96200DFFBCB /* CountdownView.swift in Sources */,
 				EA32C1B32B67FBA5000EB176 /* AddView.swift in Sources */,
 				EA32C1AB2B67D932000EB176 /* ContentView.swift in Sources */,
+				EAA7C1902B75734A00F20F81 /* ViewModel.swift in Sources */,
 				EA32C1972B67A815000EB176 /* RemindmeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

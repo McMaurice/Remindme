@@ -15,6 +15,9 @@ struct AddView: View {
     @State private var title = ""
     @State private var date = Date()
     @State private var isActive = true
+   
+    @State private var showAlert = false
+    @State private var alertType: MyAlerts? = nil
     
     let strtingDate = Date()
     let endingDate: Date = Calendar.current.date(from: DateComponents(year: 2099)) ?? Date()
@@ -29,6 +32,11 @@ struct AddView: View {
     var backgroundColor = LinearGradient(colors: [Color.green, Color.white],
                                                    startPoint: .topLeading,
                                                    endPoint: .bottomTrailing)
+    
+    enum MyAlerts {
+        case tooShort
+        case tooLong
+    }
     
     var body: some View {
         NavigationView {
@@ -55,7 +63,13 @@ struct AddView: View {
                 
                 Button {
                     let newEvent = Event(title: title, date: date, isActive: true)
-                    if title.count > 2 {
+                    if title.count < 2 {
+                        alertType = .tooShort
+                        showAlert.toggle()
+                    } else if title.count > 10 {
+                        alertType = .tooLong
+                        showAlert.toggle()
+                    } else {
                         vm.addEvent(event: newEvent)
                         dismiss()
                     }
@@ -76,12 +90,29 @@ struct AddView: View {
         .scrollContentBackground(.hidden) // Used to hide the default white color of a form (List views)
         .background(backgroundColor)
         .navigationTitle("Create New Event")
+        .alert(isPresented: $showAlert) {
+            getAlert()
+        }
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 self.titleInFocus = true}
             }
         }
     }
+    
+    func getAlert() -> Alert {
+        switch alertType {
+        case .tooShort:
+            return Alert(title: Text("Title is too short!"), message: nil, dismissButton: .cancel(Text("Try agin")))
+        case .tooLong:
+            return Alert(title: Text("Title is too long!"), message: nil, dismissButton:.default(Text("OK"), action: {
+            }))
+        default:
+            return Alert(title: Text("ERROR"))
+        }
+
+    }
+    
 }
 
 struct AddView_Previews: PreviewProvider {

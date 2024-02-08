@@ -34,8 +34,8 @@ struct LoadingView: View {
                         .offset(x: 10, y: 10)
             
                 }
-                .padding(20)
-                Text("Loading...")
+                .padding(30)
+                Text("Remindme")
                     .font(.headline)
             }
         }

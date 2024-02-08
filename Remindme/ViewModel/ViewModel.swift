@@ -2,23 +2,10 @@
 //  ViewModel.swift
 //  Remindme
 //
-//  Created by Macmaurice Osuji on 1/29/24.
+//  Created by Macmaurice Osuji on 2/8/24.
 //
 
 import Foundation
-import SwiftUI
-
-struct Event: Identifiable, Codable, Equatable, Hashable {
-    var id = UUID()
-    let title: String
-    let date: Date
-    var isActive: Bool
-
-    var formattedDate: String {
-        date.formatted(date: .abbreviated, time: .standard)
-    }
-
-}
 
 class ViewModel: ObservableObject {
     @Published var events: [Event] {
