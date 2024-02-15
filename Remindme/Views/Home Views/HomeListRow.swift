@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeListView: View {
+struct HomeListRow: View {
     
     var event: EventModel
     
@@ -43,6 +43,6 @@ struct HomeListView: View {
 
 struct HomeListView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeListView(event: EventModel(title: "newyear", date: Date(), isActive: true))
+        HomeListRow(event: EventModel(title: "newyear", date: Date(), isActive: true))
     }
 }

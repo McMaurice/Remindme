@@ -38,6 +38,17 @@ struct CountdownView: View {
                 .padding()
             
             VStack {
+                Text("Scheduled to be on")
+                    .font(.callout)
+                    .padding(.bottom, 1)
+                
+                Text("\(event.date.formatted(date: .complete, time: .standard))")
+                    .font(.headline)
+                    .fontWeight(.semibold)
+            }
+            .padding(.horizontal)
+            
+            VStack {
                 Text("\(eventViewModel.timeString(from: event.isActive ? timeRemaining : 0 ))")
                     .font(.system(size: 45))
                     .frame(height: 80.0)
@@ -80,7 +91,7 @@ struct CountdownView: View {
                             .shadow(radius: 10)
                     }
                     .padding(.bottom)
-                    .confirmationDialog("Are you sure you want to end this reminder? 🤔", isPresented: $confirmationDialog, titleVisibility: .visible) {
+                    .confirmationDialog("Are you sure you want to end this reminder?", isPresented: $confirmationDialog, titleVisibility: .visible) {
                         Button("Continue", role: .destructive) {
                             eventViewModel.switchCompletion(event: event)
                         }

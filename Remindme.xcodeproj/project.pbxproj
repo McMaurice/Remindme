@@ -19,7 +19,7 @@
 		EA4BAF122B7684D000B1AFFC /* lineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4BAF112B7684D000B1AFFC /* lineView.swift */; };
 		EAA7C1902B75734A00F20F81 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7C18F2B75734A00F20F81 /* EventViewModel.swift */; };
 		EAB52D992B7B9F9700DC3CA6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB52D982B7B9F9700DC3CA6 /* Launch Screen.storyboard */; };
-		EAB52D9C2B7BA6A500DC3CA6 /* HomeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB52D9B2B7BA6A500DC3CA6 /* HomeListView.swift */; };
+		EAB52D9C2B7BA6A500DC3CA6 /* HomeListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB52D9B2B7BA6A500DC3CA6 /* HomeListRow.swift */; };
 		EAB52D9E2B7BA7D700DC3CA6 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB52D9D2B7BA7D700DC3CA6 /* ButtonView.swift */; };
 		EAB52DA12B7BAB6200DC3CA6 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB52DA02B7BAB6200DC3CA6 /* TimerView.swift */; };
 /* End PBXBuildFile section */
@@ -38,7 +38,7 @@
 		EA4BAF112B7684D000B1AFFC /* lineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lineView.swift; sourceTree = "<group>"; };
 		EAA7C18F2B75734A00F20F81 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		EAB52D982B7B9F9700DC3CA6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		EAB52D9B2B7BA6A500DC3CA6 /* HomeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListView.swift; sourceTree = "<group>"; };
+		EAB52D9B2B7BA6A500DC3CA6 /* HomeListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListRow.swift; sourceTree = "<group>"; };
 		EAB52D9D2B7BA7D700DC3CA6 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		EAB52DA02B7BAB6200DC3CA6 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				EA32C1B02B67FAA1000EB176 /* HomeView.swift */,
-				EAB52D9B2B7BA6A500DC3CA6 /* HomeListView.swift */,
+				EAB52D9B2B7BA6A500DC3CA6 /* HomeListRow.swift */,
 				EAB52D9D2B7BA7D700DC3CA6 /* ButtonView.swift */,
 			);
 			path = "Home Views";
@@ -228,7 +228,7 @@
 				EAB52DA12B7BAB6200DC3CA6 /* TimerView.swift in Sources */,
 				EAB52D9E2B7BA7D700DC3CA6 /* ButtonView.swift in Sources */,
 				EAA7C1902B75734A00F20F81 /* EventViewModel.swift in Sources */,
-				EAB52D9C2B7BA6A500DC3CA6 /* HomeListView.swift in Sources */,
+				EAB52D9C2B7BA6A500DC3CA6 /* HomeListRow.swift in Sources */,
 				EA4BAF122B7684D000B1AFFC /* lineView.swift in Sources */,
 				EA32C1972B67A815000EB176 /* RemindmeApp.swift in Sources */,
 			);

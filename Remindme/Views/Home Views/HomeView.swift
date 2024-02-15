@@ -21,7 +21,7 @@ struct HomeView: View {
                         NavigationLink {
                             CountdownView(event: event)
                         } label: {
-                            HomeListView(event: event)
+                            HomeListRow(event: event)
                         }
                     }
                     .onDelete(perform: eventViewModel.deleteEvent)
