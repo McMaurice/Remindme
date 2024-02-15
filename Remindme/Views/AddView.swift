@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct AddView: View {
-    @StateObject var vm: ViewModel
+    @EnvironmentObject var eventViewModel: EventViewModel
     @Environment(\.dismiss) var dismiss
     
     @FocusState private var titleInFocus: Bool
-    @State private var title = ""
-    @State private var date = Date()
-    @State private var isActive = true
-   
+    
+    @State private var titleField = ""
+    @State private var dateField = Date()
     @State private var showAlert = false
     @State private var alertType: MyAlerts? = nil
     
     let strtingDate = Date()
-    let endingDate: Date = Calendar.current.date(from: DateComponents(year: 2099)) ?? Date()
+    let endingDate: Date = Calendar.current.date(byAdding: .day, value: 365, to: Date()) ?? Date()
+
     
     var dateFormattter: DateFormatter {
         let formater = DateFormatter()
@@ -39,20 +39,20 @@ struct AddView: View {
     }
     
     var body: some View {
-        NavigationView {
+       
             VStack {
                 Form {
                     Section {
-                        TextField("Enter the event title", text: $title)
+                        TextField("Enter the event title", text: $titleField)
                             .focused($titleInFocus)
                     }
                     Section {
-                        DatePicker("Select date", selection: $date, in: strtingDate...endingDate)
+                        DatePicker("Select date", selection: $dateField, in: strtingDate...endingDate)
                             .datePickerStyle(.graphical)
                             .labelsHidden()
                     }
                     Section {
-                        Text(dateFormattter.string(from: date))
+                        Text(dateFormattter.string(from: dateField))
                             .foregroundColor(Color.red)
                             .font(.headline)
                     } header: {
@@ -62,15 +62,8 @@ struct AddView: View {
                 }
                 
                 Button {
-                    let newEvent = Event(title: title, date: date, isActive: true)
-                    if title.count < 2 {
-                        alertType = .tooShort
-                        showAlert.toggle()
-                    } else if title.count > 10 {
-                        alertType = .tooLong
-                        showAlert.toggle()
-                    } else {
-                        vm.addEvent(event: newEvent)
+                    if inputCheker() {
+                        eventViewModel.addEvent(title: titleField, date: dateField)
                         dismiss()
                     }
                 } label: {
@@ -85,11 +78,11 @@ struct AddView: View {
                                 .cornerRadius(10)
                                 .shadow(radius: 10))
                 }
-
         }
+        .navigationTitle("Create New Event")
         .scrollContentBackground(.hidden) // Used to hide the default white color of a form (List views)
         .background(backgroundColor)
-        .navigationTitle("Create New Event")
+        
         .alert(isPresented: $showAlert) {
             getAlert()
         }
@@ -98,7 +91,7 @@ struct AddView: View {
                 self.titleInFocus = true}
             }
         }
-    }
+    
     
     func getAlert() -> Alert {
         switch alertType {
@@ -110,13 +103,29 @@ struct AddView: View {
         default:
             return Alert(title: Text("ERROR"))
         }
-
+    }
+    
+    func inputCheker() -> Bool {
+        if titleField.count < 2 {
+            alertType = .tooShort
+            showAlert.toggle()
+            return false
+        } else if titleField.count > 30 {
+            alertType = .tooLong
+            showAlert.toggle()
+            return false
+        } else {
+            return true
+        }
     }
     
 }
 
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {
-        AddView(vm: ViewModel())
+        NavigationStack {
+            AddView()
+        }
+        .environmentObject(EventViewModel())
     }
 }

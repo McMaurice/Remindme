@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var vm: ViewModel
     @State private var isLoading = true
     
     var body: some View {
@@ -20,13 +19,13 @@ struct ContentView: View {
                    }
                }
        } else {
-           HomeView(vm: vm)
+           HomeView()
        }
    }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(vm: ViewModel())
+        ContentView()
     }
 }

@@ -19,15 +19,15 @@ struct LoadingView: View {
                            endPoint: .bottomTrailing).ignoresSafeArea()
             VStack {
                 ZStack {
-                    Triangle()
+                    lineView()
                         .stroke(.blue, lineWidth: 3)
                         .frame(width: 50, height: 50)
                         .rotationEffect(Angle(degrees: loading ? 360 : 0))
-                    Triangle()
+                    lineView()
                         .stroke(.yellow, lineWidth: 3)
                         .frame(width: 50, height: 50)
                         .rotationEffect(Angle(degrees: loading ? 180 : 0))
-                    Triangle()
+                    lineView()
                         .stroke(.yellow, lineWidth: 3)
                         .frame(width: 50, height: 50)
                         .rotationEffect(Angle(degrees: loading ? 180 : 0))
@@ -35,7 +35,7 @@ struct LoadingView: View {
             
                 }
                 .padding(30)
-                Text("Remindme")
+                Text("Loading..")
                     .font(.headline)
             }
         }
@@ -51,15 +51,6 @@ struct LoadingView: View {
     }
 }
 
-struct Triangle: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        path.move(to: CGPoint(x: rect.minX, y: rect.minY))
-        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
-        path.closeSubpath()
-        return path
-    }
-}
 
 struct LoadingView_Previews: PreviewProvider {
     static var previews: some View {

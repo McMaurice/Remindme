@@ -13,10 +13,15 @@
 		EA32C19B2B67A817000EB176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA32C19A2B67A817000EB176 /* Assets.xcassets */; };
 		EA32C19E2B67A817000EB176 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA32C19D2B67A817000EB176 /* Preview Assets.xcassets */; };
 		EA32C1AB2B67D932000EB176 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32C1AA2B67D932000EB176 /* ContentView.swift */; };
-		EA32C1AD2B67DE4F000EB176 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32C1AC2B67DE4F000EB176 /* UserModel.swift */; };
+		EA32C1AD2B67DE4F000EB176 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32C1AC2B67DE4F000EB176 /* EventModel.swift */; };
 		EA32C1B12B67FAA1000EB176 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32C1B02B67FAA1000EB176 /* HomeView.swift */; };
 		EA32C1B32B67FBA5000EB176 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA32C1B22B67FBA5000EB176 /* AddView.swift */; };
-		EAA7C1902B75734A00F20F81 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7C18F2B75734A00F20F81 /* ViewModel.swift */; };
+		EA4BAF122B7684D000B1AFFC /* lineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4BAF112B7684D000B1AFFC /* lineView.swift */; };
+		EAA7C1902B75734A00F20F81 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7C18F2B75734A00F20F81 /* EventViewModel.swift */; };
+		EAB52D992B7B9F9700DC3CA6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB52D982B7B9F9700DC3CA6 /* Launch Screen.storyboard */; };
+		EAB52D9C2B7BA6A500DC3CA6 /* HomeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB52D9B2B7BA6A500DC3CA6 /* HomeListView.swift */; };
+		EAB52D9E2B7BA7D700DC3CA6 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB52D9D2B7BA7D700DC3CA6 /* ButtonView.swift */; };
+		EAB52DA12B7BAB6200DC3CA6 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB52DA02B7BAB6200DC3CA6 /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,10 +32,15 @@
 		EA32C19A2B67A817000EB176 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA32C19D2B67A817000EB176 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA32C1AA2B67D932000EB176 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EA32C1AC2B67DE4F000EB176 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		EA32C1AC2B67DE4F000EB176 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		EA32C1B02B67FAA1000EB176 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EA32C1B22B67FBA5000EB176 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
-		EAA7C18F2B75734A00F20F81 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		EA4BAF112B7684D000B1AFFC /* lineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lineView.swift; sourceTree = "<group>"; };
+		EAA7C18F2B75734A00F20F81 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		EAB52D982B7B9F9700DC3CA6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		EAB52D9B2B7BA6A500DC3CA6 /* HomeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListView.swift; sourceTree = "<group>"; };
+		EAB52D9D2B7BA7D700DC3CA6 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		EAB52DA02B7BAB6200DC3CA6 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,18 +91,46 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EA4BAF0E2B76842500B1AFFC /* Loading Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA32C1982B67A816000EB176 /* LoadingView.swift */,
+				EA4BAF112B7684D000B1AFFC /* lineView.swift */,
+			);
+			path = "Loading Views";
+			sourceTree = "<group>";
+		};
 		EAA7C18E2B7572AD00F20F81 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				EAA7C18F2B75734A00F20F81 /* ViewModel.swift */,
+				EAA7C18F2B75734A00F20F81 /* EventViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EAB52D9A2B7BA65F00DC3CA6 /* Home Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA32C1B02B67FAA1000EB176 /* HomeView.swift */,
+				EAB52D9B2B7BA6A500DC3CA6 /* HomeListView.swift */,
+				EAB52D9D2B7BA7D700DC3CA6 /* ButtonView.swift */,
+			);
+			path = "Home Views";
+			sourceTree = "<group>";
+		};
+		EAB52D9F2B7BAAD400DC3CA6 /* CountDown Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA2B450D2B6AA96200DFFBCB /* CountdownView.swift */,
+				EAB52DA02B7BAB6200DC3CA6 /* TimerView.swift */,
+			);
+			path = "CountDown Views";
 			sourceTree = "<group>";
 		};
 		EAB6E2AE2B691D1E001A3B0D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EA32C1AC2B67DE4F000EB176 /* UserModel.swift */,
+				EA32C1AC2B67DE4F000EB176 /* EventModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,11 +138,12 @@
 		EAB6E2AF2B691D44001A3B0D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EA32C1982B67A816000EB176 /* LoadingView.swift */,
+				EAB52D9F2B7BAAD400DC3CA6 /* CountDown Views */,
+				EAB52D9A2B7BA65F00DC3CA6 /* Home Views */,
+				EA4BAF0E2B76842500B1AFFC /* Loading Views */,
 				EA32C1AA2B67D932000EB176 /* ContentView.swift */,
 				EA32C1B22B67FBA5000EB176 /* AddView.swift */,
-				EA32C1B02B67FAA1000EB176 /* HomeView.swift */,
-				EA2B450D2B6AA96200DFFBCB /* CountdownView.swift */,
+				EAB52D982B7B9F9700DC3CA6 /* Launch Screen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB52D992B7B9F9700DC3CA6 /* Launch Screen.storyboard in Resources */,
 				EA32C19E2B67A817000EB176 /* Preview Assets.xcassets in Resources */,
 				EA32C19B2B67A817000EB176 /* Assets.xcassets in Resources */,
 			);
@@ -179,13 +219,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA32C1AD2B67DE4F000EB176 /* UserModel.swift in Sources */,
+				EA32C1AD2B67DE4F000EB176 /* EventModel.swift in Sources */,
 				EA32C1B12B67FAA1000EB176 /* HomeView.swift in Sources */,
 				EA32C1992B67A816000EB176 /* LoadingView.swift in Sources */,
 				EA2B450E2B6AA96200DFFBCB /* CountdownView.swift in Sources */,
 				EA32C1B32B67FBA5000EB176 /* AddView.swift in Sources */,
 				EA32C1AB2B67D932000EB176 /* ContentView.swift in Sources */,
-				EAA7C1902B75734A00F20F81 /* ViewModel.swift in Sources */,
+				EAB52DA12B7BAB6200DC3CA6 /* TimerView.swift in Sources */,
+				EAB52D9E2B7BA7D700DC3CA6 /* ButtonView.swift in Sources */,
+				EAA7C1902B75734A00F20F81 /* EventViewModel.swift in Sources */,
+				EAB52D9C2B7BA6A500DC3CA6 /* HomeListView.swift in Sources */,
+				EA4BAF122B7684D000B1AFFC /* lineView.swift in Sources */,
 				EA32C1972B67A815000EB176 /* RemindmeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,16 +362,19 @@
 				DEVELOPMENT_TEAM = Q25PGH827A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Remind me";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.macmaurice.Remindme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -347,16 +394,19 @@
 				DEVELOPMENT_TEAM = Q25PGH827A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Remind me";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.macmaurice.Remindme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct RemindmeApp: App {
+    
+    @StateObject var eventViewModel: EventViewModel = EventViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView(vm: ViewModel())
+            NavigationStack {
+                ContentView()
+            }
+            .environmentObject(eventViewModel)
         }
     }
 }
