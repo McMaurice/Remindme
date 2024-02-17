@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeListRow: View {
     
+    @EnvironmentObject var eventViewModel: EventViewModel
     var event: EventModel
     
     var body: some View {
@@ -23,6 +24,11 @@ struct HomeListRow: View {
                 Text(event.isActive ? "Active" : "Inactive")
                     .foregroundColor(event.isActive ? Color.green : Color.red)
                     .padding(.trailing)
+            }
+            .onAppear {
+                if event.date <= Date() {
+                    eventViewModel.switchCompletion(event: event)
+                }
             }
             .padding(.trailing, 5)
             .padding(.bottom, 5)
