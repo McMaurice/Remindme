@@ -104,7 +104,7 @@ struct CountdownView: View {
     }
 
     private func updateTimeRemaining() {
-        if timeRemaining > 0 && event.isActive {
+        if timeRemaining > 0 {
             timeRemaining -= 1
         } else {
             eventViewModel.switchCompletion(event: event)

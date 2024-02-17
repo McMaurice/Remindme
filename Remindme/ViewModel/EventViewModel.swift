@@ -41,6 +41,7 @@ class EventViewModel: ObservableObject {
     
     func addEvent(title: String, date: Date) {
         let newEvent = EventModel(title: title, date: date, isActive: true)
+        NotificationManager.instance.scheduleNotification(date: date, title: title)
         events.append(newEvent)
     }
     

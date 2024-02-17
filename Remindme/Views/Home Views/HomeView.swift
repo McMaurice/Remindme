@@ -28,6 +28,10 @@ struct HomeView: View {
                     .onMove(perform: eventViewModel.moveEvent)
                     
                 }
+                .onAppear {
+                    NotificationManager.instance.requestAuthorization()
+                    UIApplication.shared.applicationIconBadgeNumber = 0
+                }
                 .navigationBarTitle("Reminders")
                 .listStyle(.plain)
                 .overlay(Group {
@@ -55,7 +59,6 @@ struct HomeView: View {
             .sheet(isPresented: $showSheet) {
                 AddView()
             }
-        
     }
 }
 
