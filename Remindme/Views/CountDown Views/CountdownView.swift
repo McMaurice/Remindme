@@ -15,7 +15,7 @@ struct CountdownView: View {
     @State private var targetDate = Date()
     @State private var secondsDifference = 0
     @State private var active = false
-    @State private var timeRemaining = 0
+    @State  var timeRemaining = 0
     @State private var confirmationDialog = false
     
     @State var targetDateString = "Feb 14, 2024 at 12:30:00 PM"
@@ -48,25 +48,7 @@ struct CountdownView: View {
             }
             .padding(.horizontal)
             
-            VStack {
-                Text("\(eventViewModel.timeString(from: event.isActive ? timeRemaining : 0 ))")
-                    .font(.system(size: 45))
-                    .frame(height: 80.0)
-                    .frame(minWidth: 0, maxWidth: .infinity)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(25)
-                    .shadow(radius: 10)
-                    .padding()
-            }
-            
-            HStack(spacing: 50) {
-                Text("DAYS")
-                Text("HRS")
-                Text("MINS")
-                Text("SECS")
-            }
-            .padding(.bottom, 50)
+            TimerDisplayView
             
             if !event.isActive {
                 Text("This event is not active at the moment!😔")

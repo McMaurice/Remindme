@@ -21,7 +21,7 @@
 		EAB52D992B7B9F9700DC3CA6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB52D982B7B9F9700DC3CA6 /* Launch Screen.storyboard */; };
 		EAB52D9C2B7BA6A500DC3CA6 /* HomeListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB52D9B2B7BA6A500DC3CA6 /* HomeListRow.swift */; };
 		EAB52D9E2B7BA7D700DC3CA6 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB52D9D2B7BA7D700DC3CA6 /* ButtonView.swift */; };
-		EAB52DA12B7BAB6200DC3CA6 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB52DA02B7BAB6200DC3CA6 /* TimerView.swift */; };
+		EAB52DA12B7BAB6200DC3CA6 /* TimerDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB52DA02B7BAB6200DC3CA6 /* TimerDisplayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,7 @@
 		EAB52D982B7B9F9700DC3CA6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		EAB52D9B2B7BA6A500DC3CA6 /* HomeListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListRow.swift; sourceTree = "<group>"; };
 		EAB52D9D2B7BA7D700DC3CA6 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
-		EAB52DA02B7BAB6200DC3CA6 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		EAB52DA02B7BAB6200DC3CA6 /* TimerDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDisplayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				EA2B450D2B6AA96200DFFBCB /* CountdownView.swift */,
-				EAB52DA02B7BAB6200DC3CA6 /* TimerView.swift */,
+				EAB52DA02B7BAB6200DC3CA6 /* TimerDisplayView.swift */,
 			);
 			path = "CountDown Views";
 			sourceTree = "<group>";
@@ -225,7 +225,7 @@
 				EA2B450E2B6AA96200DFFBCB /* CountdownView.swift in Sources */,
 				EA32C1B32B67FBA5000EB176 /* AddView.swift in Sources */,
 				EA32C1AB2B67D932000EB176 /* ContentView.swift in Sources */,
-				EAB52DA12B7BAB6200DC3CA6 /* TimerView.swift in Sources */,
+				EAB52DA12B7BAB6200DC3CA6 /* TimerDisplayView.swift in Sources */,
 				EAB52D9E2B7BA7D700DC3CA6 /* ButtonView.swift in Sources */,
 				EAA7C1902B75734A00F20F81 /* EventViewModel.swift in Sources */,
 				EAB52D9C2B7BA6A500DC3CA6 /* HomeListRow.swift in Sources */,
